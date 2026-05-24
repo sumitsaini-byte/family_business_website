@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fix Admin Panel</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        .step { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Admin Panel Fix</h1>
+    
+    <div class="step">
+        <h3>Step 1: Clear Browser Storage</h3>
+        <button onclick="clearStorage()">Clear Storage</button>
+        <div id="storage-status"></div>
+    </div>
+    
+    <div class="step">
+        <h3>Step 2: Fresh Login</h3>
+        <button onclick="freshLogin()">Login Fresh</button>
+        <div id="login-status"></div>
+    </div>
+    
+    <div class="step">
+        <h3>Step 3: Test Admin Pages</h3>
+        <button onclick="testDashboard()">Test Dashboard</button>
+        <button onclick="testBookings()">Test Bookings</button>
+        <button onclick="testReviews()">Test Reviews</button>
+        <div id="test-status"></div>
+    </div>
+    
+    <div class="step">
+        <h3>Step 4: Access Admin Panel</h3>
+        <a href="http://localhost:3000/admin" target="_blank">Open Admin Dashboard</a> |
+        <a href="http://localhost:3000/admin-bookings" target="_blank">Open Bookings</a> |
+        <a href="http://localhost:3000/admin-reviews" target="_blank">Open Reviews</a> |
+        <a href="http://localhost:3000/admin-products" target="_blank">Open Products</a>
+    </div>
+
+    <script>
+        function clearStorage() {
+            localStorage.clear();
+            document.getElementById('storage-status').innerHTML = '<span class="success">Storage cleared!</span>';
+        }
+        
+        async function freshLogin() {
+            try {
+                const response = await fetch('http://localhost:3000/api/admin/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: 'admin', password: 'admin123' })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    localStorage.setItem('adminToken', data.token);
+                    document.getElementById('login-status').innerHTML = '<span class="success">Login successful!</span>';
+                } else {
+                    document.getElementById('login-status').innerHTML = '<span class="error">Login failed!</span>';
+                }
+            } catch (error) {
+                document.getElementById('login-status').innerHTML = '<span class="error">Login error: ' + error.message + '</span>';
+            }
+        }
+        
+        async function testDashboard() {
+            const token = localStorage.getItem('adminToken');
+            if (!token) {
+                document.getElementById('test-status').innerHTML = '<span class="error">No token found! Please login first.</span>';
+                return;
+            }
+            
+            try {
+                const response = await fetch('http://localhost:3000/api/admin/dashboard', {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('test-status').innerHTML = '<span class="success">Dashboard API working! Found ' + data.totalBookings + ' bookings</span>';
+                } else {
+                    document.getElementById('test-status').innerHTML = '<span class="error">Dashboard API failed: ' + response.status + '</span>';
+                }
+            } catch (error) {
+                document.getElementById('test-status').innerHTML = '<span class="error">Dashboard error: ' + error.message + '</span>';
+            }
+        }
+        
+        async function testBookings() {
+            const token = localStorage.getItem('adminToken');
+            if (!token) {
+                document.getElementById('test-status').innerHTML = '<span class="error">No token found! Please login first.</span>';
+                return;
+            }
+            
+            try {
+                const response = await fetch('http://localhost:3000/api/admin/bookings', {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('test-status').innerHTML = '<span class="success">Bookings API working! Found ' + data.length + ' bookings</span>';
+                } else {
+                    document.getElementById('test-status').innerHTML = '<span class="error">Bookings API failed: ' + response.status + '</span>';
+                }
+            } catch (error) {
+                document.getElementById('test-status').innerHTML = '<span class="error">Bookings error: ' + error.message + '</span>';
+            }
+        }
+        
+        async function testReviews() {
+            const token = localStorage.getItem('adminToken');
+            if (!token) {
+                document.getElementById('test-status').innerHTML = '<span class="error">No token found! Please login first.</span>';
+                return;
+            }
+            
+            try {
+                const response = await fetch('http://localhost:3000/api/reviews', {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('test-status').innerHTML = '<span class="success">Reviews API working! Found ' + data.length + ' reviews</span>';
+                } else {
+                    document.getElementById('test-status').innerHTML = '<span class="error">Reviews API failed: ' + response.status + '</span>';
+                }
+            } catch (error) {
+                document.getElementById('test-status').innerHTML = '<span class="error">Reviews error: ' + error.message + '</span>';
+            }
+        }
+    </script>
+</body>
+</html>

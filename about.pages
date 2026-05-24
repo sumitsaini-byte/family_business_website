@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us - Furnish & Co. Premium Furniture Rentals</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Furnish <span>&</span> Co.</a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="nav-cta">About</a></li>
+    <li><a href="products.html">Catalog</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="min-height: 60vh; padding: 8rem 5% 4rem;">
+  <div class="hero-text">
+    <div class="hero-tag">About Us</div>
+    <h1 class="hero-title">
+      We Make Your<br>Events<br><em>Memorable</em>
+    </h1>
+    <p class="hero-desc">
+      We are a family-run furniture rental business passionate about making every event beautiful. From grand weddings to corporate meetings, we provide the perfect furniture for your special occasions.
+    </p>
+    <div class="hero-btns">
+      <a href="products.html" class="btn-primary">View Our Collection</a>
+      <a href="booking.html" class="btn-outline">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">500+</div>
+    <div class="stat-label">Events Served</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">2000+</div>
+    <div class="stat-label">Furniture Items</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">8+</div>
+    <div class="stat-label">Years Experience</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">98%</div>
+    <div class="stat-label">Client Satisfaction</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-block">
+      <div class="about-img-main">
+        <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:80px;opacity:0.15;">
+          <rect x="20" y="60" width="60" height="8" rx="3" fill="#C9A84C"/>
+          <rect x="18" y="45" width="64" height="17" rx="5" fill="#C9A84C"/>
+          <rect x="22" y="68" width="9" height="28" rx="3" fill="#C9A84C"/>
+          <rect x="69" y="68" width="9" height="28" rx="3" fill="#C9A84C"/>
+          <rect x="14" y="40" width="9" height="56" rx="4" fill="#C9A84C"/>
+          <rect x="77" y="40" width="9" height="56" rx="4" fill="#C9A84C"/>
+        </svg>
+      </div>
+      <div class="about-accent-box">
+        <div class="about-accent-num">8</div>
+        <div class="about-accent-label">Years in Business</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="section-tag">Our Story</div>
+      <h2 class="section-title">Passion for<br>Perfect Events</h2>
+      <p class="section-sub">
+        We started Furnish & Co. with a simple mission: to make every event beautiful and stress-free. What began as a small collection of chairs has grown into a comprehensive furniture rental service serving hundreds of events across the region.
+      </p>
+      <p class="section-sub" style="margin-top: 1.5rem;">
+        As a family-run business, we treat every event like our own. We understand the importance of details, the pressure of deadlines, and the joy of seeing everything come together perfectly. That's why we personally oversee every delivery, setup, and collection.
+      </p>
+      <div class="about-features">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 8h14M5 8a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v.01M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="feature-title">Wide Selection</div>
+          <div class="feature-desc">Chairs, sofas, tables, and more for any occasion.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="feature-title">Free Delivery</div>
+          <div class="feature-desc">We deliver, set up, and pick up on time.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="feature-title">Quality Assured</div>
+          <div class="feature-desc">All items cleaned and inspected before every rental.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="feature-title">Affordable Rates</div>
+          <div class="feature-desc">Flexible packages for all budgets and event sizes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section style="background: var(--warm-white); padding: 6rem 5%;">
+  <div class="section-header reveal">
+    <div class="section-tag">Our Team</div>
+    <h2 class="section-title">Meet the Family</h2>
+    <p class="section-sub">The dedicated people behind every successful event.</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+    <div style="text-align: center; padding: 2rem; background: var(--cream); border-radius: 4px; border: 1px solid var(--border);">
+      <div style="width: 80px; height: 80px; background: var(--gold-light); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--gold); font-size: 1.5rem;">RG</div>
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--charcoal);">Ramesh Gupta</h3>
+      <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem;">Founder & CEO</p>
+      <p style="font-size: 0.82rem; color: var(--charcoal-soft); line-height: 1.6;">With 15+ years in event management, Ramesh leads our vision and ensures quality in every detail.</p>
+    </div>
+    <div style="text-align: center; padding: 2rem; background: var(--cream); border-radius: 4px; border: 1px solid var(--border);">
+      <div style="width: 80px; height: 80px; background: var(--gold-light); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--gold); font-size: 1.5rem;">SG</div>
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--charcoal);">Sunita Gupta</h3>
+      <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem;">Operations Head</p>
+      <p style="font-size: 0.82rem; color: var(--charcoal-soft); line-height: 1.6;">Sunita ensures smooth operations, from inventory management to timely deliveries.</p>
+    </div>
+    <div style="text-align: center; padding: 2rem; background: var(--cream); border-radius: 4px; border: 1px solid var(--border);">
+      <div style="width: 80px; height: 80px; background: var(--gold-light); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--gold); font-size: 1.5rem;">AK</div>
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--charcoal);">Amit Kumar</h3>
+      <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem;">Logistics Manager</p>
+      <p style="font-size: 0.82rem; color: var(--charcoal-soft); line-height: 1.6;">Amit coordinates all deliveries and setups, ensuring everything arrives on time and perfectly arranged.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Furnish <span>&</span> Co.</div>
+      <p class="footer-tagline">Premium furniture rentals for weddings, corporate events, and all occasions. Delivered, set up, and collected.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Quick Links</div>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Catalog</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#testimonials">Reviews</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Categories</div>
+      <a href="products.html">Chairs</a>
+      <a href="products.html">Sofas</a>
+      <a href="products.html">Tables</a>
+      <a href="products.html">Decor Items</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <a href="#">+91 98765 43210</a>
+      <a href="#">bookings@furnishandco.in</a>
+      <a href="#">123 Market Road, City</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">2026 Furnish and Co. All rights reserved.</div>
+    <div class="footer-copy">Designed with care for your events</div>
+  </div>
+</footer>
+
+<script>
+  // NAV SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // MOBILE MENU
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'fixed';
+    links.style.top = '0'; links.style.left = '0';
+    links.style.right = '0'; links.style.bottom = '0';
+    links.style.background = 'rgba(247,244,239,0.97)';
+    links.style.alignItems = 'center';
+    links.style.justifyContent = 'center';
+    links.style.gap = '2rem';
+    links.style.zIndex = '150';
+    links.style.backdropFilter = 'blur(12px)';
+  }
+
+  // REVEAL ANIMATION
+  function reveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(element => {
+      const windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+      const elementVisible = 150;
+      
+      if (elementTop < windowHeight - elementVisible) {
+        element.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', reveal);
+  reveal();
+</script>
+
+</body>
+</html>

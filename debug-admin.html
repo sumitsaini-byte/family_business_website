@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel Debug</h1>
+    <div id="status">Checking...</div>
+    <div id="products"></div>
+    
+    <script>
+        async function testAdmin() {
+            const statusDiv = document.getElementById('status');
+            const productsDiv = document.getElementById('products');
+            
+            try {
+                // Check if token exists
+                const token = localStorage.getItem('adminToken');
+                if (!token) {
+                    statusDiv.innerHTML = '❌ No admin token found. Please login first.';
+                    statusDiv.innerHTML += '<br><a href="http://localhost:3001/login">Login Here</a>';
+                    return;
+                }
+                
+                statusDiv.innerHTML = '✅ Token found: ' + token.substring(0, 20) + '...';
+                
+                // Test admin API
+                const response = await fetch('http://localhost:3000/api/admin/products', {
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    statusDiv.innerHTML = '✅ Admin API working! Found ' + data.length + ' products';
+                    productsDiv.innerHTML = '<h3>Products:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                } else {
+                    statusDiv.innerHTML = '❌ Admin API failed: ' + response.status + ' ' + response.statusText;
+                }
+                
+            } catch (error) {
+                statusDiv.innerHTML = '❌ Error: ' + error.message;
+            }
+        }
+        
+        testAdmin();
+    </script>
+</body>
+</html>

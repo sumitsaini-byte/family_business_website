@@ -1,0 +1,2411 @@
+Jagan Institute of Management Studies
+
+(3, Institutional Area, Sector-5, Rohini, Delhi-110085)
+
+Affiliated to Guru Gobind Singh Indraprastha University
+
+MINOR PROJECT-I
+
+ON
+
+“FURNITURE RENTING WEBSITE”
+
+Submitted in partial fulfilment of requirement of
+
+“Master of Computer Application” (MCA)
+
+Paper Code – MCA-169
+
+Submitted By:                                                          Submitted To:       Sumit Saini                                                                      Mr. Sanjeeve Saxen            35514004424                                                                   Professor (IT)
+
+CERTIFICATE
+
+This is to certify that the project report entitled FURNITURE RENTING WEBSITE submitted to   Jagan Institute of Management Studies in partial fulfilment of the requirement for the award of the degree of MASTER OF COMPUTER APPLICATIONS (MCA) is an original work carried out by Mr. Sumit Saini enrolment no.35514004424 under my guidance. The matter embodied in this project is authentic and is genuine work done by the student and has not been submitted whether to this University or to any other University / Institute for the fulfilment of the requirement of any course of study.
+
+……………………….
+
+Signature of the Student:
+
+Date: ………………..
+
+Name and Enroll No
+
+………………………..
+
+………………………..
+
+...………………………………….
+
+Signature of the Project Coordinator
+
+Date: …………………
+
+Dr. Akanksha Upadhyaya
+
+Associate Professor
+
+Department of IT
+
+Furniture Renting Website Project
+
+Name
+
+Role
+
+Responsibilities
+
+Sumit Saini
+
+Team Leader / Full Stack Developer
+
+- Coordinated group meetings and task assignments- Developed website frontend (UI/UX)- Developed backend (server, database integration)- Deployed and managed the website- Ensured project met deadlines and requirements
+
+Anubhav Vaishith
+
+Backend Developer
+
+- Assisted in backend development (database, server-side logic)- Helped set up product catalog and user management- Supported integration of backend with frontend- Worked on website security and data handling
+
+Lakshay Sharma
+
+Designer / Content Creator
+
+- Designed website layout and graphics- Created product images and banners- Wrote product descriptions and website content- Assisted in making the site user-friendly
+
+Team Members: Sumit Saini, Anubhav Vaishith, Lakshay Sharma
+
+ABSTRACT
+
+This project involves the design and development of a website for a family-owned business specializing in the rental of furniture for weddings and events. The primary goal was to create an online platform that allows customers to easily browse available furniture options and make bookings directly through the website. The website was developed using HTML, CSS, JavaScript, Bootstrap, and PHP, with a MySQL database for storing client data and inventory information.
+
+The project focuses on delivering a responsive, user-friendly interface that works across devices, from desktops to mobile phones. Key features include a dynamic product catalog, an online booking form, and a feedback system to improve customer engagement
+
+This report outlines the planning, development process, and technical implementation, highlighting key challenges encountered and how they were addressed. The result is a functional, professional website that improves the business’s online presence, streamlines client interactions and enhances operational efficiency.
+
+ACKNOWLEGEMENT
+
+I take this opportunity to present my votes of thanks to my faculty who really acted as pillars to help my way throughout the execution of lab exercises that has led to successful and satisfactory completion of the Minor Project.
+
+I feel great sense of gratitude for Dr. Akanksha Upadhyaya under whose guidance and motivation this work has been performed.
+
+I would also like to express my thanks to all lab personnel for providing assistance and fulfilling the requirements for the completion of this project . This project would not have completed without their support.
+
+I also would like to thank all the  faculty members of the Information Technology Department, JIMS Rohini (Sec-5) for time to time guidance and helping me to make a thorough study of this project.
+
+Student Name : Sumit Saini
+
+Enrollment No. : 35514004424
+
+INDEX
+
+Section
+
+Title
+
+Page No.
+
+Title Page
+
+-
+
+Certificate of Authenticated Work
+
+-
+
+i
+
+Role and Responsibility Form
+
+-
+
+ii
+
+Abstract
+
+-
+
+Iii
+
+Acknowledgement
+
+-
+
+iv
+
+Table of Contents
+
+-
+
+v
+
+Table of Figures
+
+-
+
+vi
+
+CHAPTER 1: INTRODUCTION
+
+1.1
+
+Background
+
+1.2
+
+Objectives
+
+1.3
+
+Purpose, Scope, and Applicability
+
+1.3.1
+
+Purpose
+
+1.3.2
+
+Scope
+
+1.3.3
+
+Applicability
+
+1.4
+
+Achievements
+
+1.5
+
+Organisation of Report
+
+CHAPTER 2: SURVEY OF TECHNOLOGIES
+
+CHAPTER 3: REQUIREMENTS AND ANALYSIS
+
+3.1
+
+Problem Definition
+
+3.2
+
+Requirements Specification
+
+3.3
+
+Planning and Scheduling
+
+3.4
+
+Software and Hardware Requirements
+
+3.5
+
+Preliminary Product Description
+
+3.6
+
+Conceptual Models
+
+CHAPTER 4: SYSTEM DESIGN
+
+4.1
+
+Basic Modules
+
+4.2
+
+Data Design
+
+4.2.2
+
+Data Integrity and Constraints
+
+4.3
+
+Procedural Design
+
+4.3.1
+
+Logic Diagrams
+
+4.3.2
+
+Data Structures
+
+4.3.3
+
+Algorithms Design
+
+4.4
+
+User Interface Design
+
+4.5
+
+Security Issues
+
+4.6
+
+Test Cases Design
+
+CHAPTER 5: IMPLEMENTATION AND TESTING
+
+5.1
+
+Implementation Approaches
+
+5.2
+
+Coding Details and Code Efficiency
+
+5.2.1
+
+Code Efficiency
+
+5.3
+
+Testing Approach
+
+5.3.1
+
+Unit Testing
+
+5.3.2
+
+Integrated Testing
+
+5.4
+
+Modifications and Improvements
+
+CHAPTER 6: RESULTS AND DISCUSSION
+
+6.1
+
+Test Reports
+
+6.2
+
+User Documentation
+
+CHAPTER 7: CONCLUSIONS
+
+7.1
+
+Conclusion
+
+7.2
+
+Limitations of the System
+
+7.3
+
+Future Scope of the Project
+
+References
+
+Glossary
+
+Annexures
+
+Annexure A
+
+Complete SQL Database Schema
+
+Annexure B
+
+User Manual
+
+Annexure C
+
+Uml Diagrams
+
+Annexure D
+
+Sample Data
+
+Annexure E
+
+Code Listings
+
+CONTENT FOR TABLES
+
+Figure Number
+
+Figure Caption / Description
+
+Approximate Page Number
+
+Figure 4.3.1.a
+
+Logic Diagram – User Registration Flow
+
+21
+
+Figure 4.3.1.b
+
+Logic Diagram – Product Booking Process
+
+21
+
+Figure 4.3.1.c
+
+Logic Diagram – Admin Order Management
+
+22
+
+Figure B.1
+
+User Registration – Enter valid user details and submit.
+
+98
+
+Figure B.2
+
+User Registration – Enter already registered email and submit.
+
+99
+
+Figure B.3
+
+User Registration – Enter already registered phone number and submit.
+
+99
+
+Figure B.4
+
+User Login – Enter valid credentials and submit.
+
+100
+
+Figure B.5
+
+User Login – Enter invalid credentials and submit.
+
+100
+
+Figure B.6
+
+Book Product – Logged-in user books a product.
+
+101
+
+Figure B.7
+
+Book Product – Not logged in, tries to book.
+
+101
+
+Figure B.8
+
+Add Product (Admin) – Admin adds product with features and facilities.
+
+102
+
+Figure B.9
+
+Add Product (Admin) – Admin deletes product.
+
+102
+
+Figure B.10
+
+Add Product (Admin) – Admin adds images to product.
+
+103
+
+Figure B.11
+
+Filter / Search – Search by category or advanced filters.
+
+103
+
+Figure B.12
+
+User Dashboard – Navigate to dashboard, edit credentials.
+
+104
+
+Figure B.13
+
+Security & Error Handling – Enter sensitive info or invalid input.
+
+104
+
+Figure B.14
+
+Admin Login – Enter correct admin credentials.
+
+105
+
+Figure B.15
+
+Admin Login – Enter incorrect admin credentials.
+
+105
+
+Figure B.16
+
+Shutdown (Admin) – Admin shuts down site, user tries to book.
+
+106
+
+Figure D.1
+
+UML Diagram - Activity diagram
+
+63
+
+Figure D.2
+
+UML Diagram -  Communication diagram
+
+64
+
+Figure D.1
+
+UML Diagram -Class diagram
+
+65
+
+Figure D.1
+
+UML Diagram -Object diagram
+
+65
+
+Figure D.1
+
+UML Diagram -Sequence diagram
+
+65
+
+Figure D.1
+
+UML Diagram -Use case diagram
+
+65
+
+CHAPTER 1: INTRODUCTION
+
+1.1 Background
+
+In today’s digital era, the event services industry is rapidly evolving, with customers increasingly seeking convenient, online solutions for their needs. Family-owned businesses, such as Sadguru Tent House-which is owned by the father of one of our team members-have traditionally operated through offline channels like word-of-mouth, phone calls, and in-person visits. While these methods have served well in the past, they often limit the business’s reach, create inefficiencies in managing bookings and inventory, and make it challenging to deliver a seamless customer experience.
+
+As customers now expect to browse products, check availability, and make bookings online at any time, it has become crucial for businesses to establish a strong online presence. Modern rental platforms offer features such as detailed product galleries, real-time booking systems, inventory management, and secure payment options, all of which streamline operations and enhance user satisfaction.
+
+Recognizing these industry trends and the specific challenges faced by Sadguru Tent House, our team decided to develop a professional online platform tailored to the needs of this family business. By digitizing key processes such as product selection, user registration, booking, and order tracking, the new system aims to reduce manual workload, minimize errors like double-booking, and provide a more organized approach to inventory and customer management.
+
+This project is not only an academic exercise, but also a meaningful opportunity to support a local, family-run enterprise in adapting to digital transformation. By creating a user-friendly and efficient online furniture rental platform, we hope to help Sadguru Tent House expand its digital reach, improve customer service, and position itself for continued growth in an increasingly competitive market.
+
+1.2 Objectives
+
+The primary objective of this project is to design and develop a professional online platform for Sadguru Tent House, a family-owned business specializing in event furniture rentals and owned by the father of one of our team members. By taking on this project, our team aims not only to apply our technical and creative skills in a real-world scenario but also to provide meaningful support to a local enterprise seeking to modernize its operations.
+
+This website will function as a comprehensive virtual storefront, allowing Sadguru Tent House to display its wide range of rental furniture and services in an attractive, accessible manner. The system is designed to make the entire rental process seamless for both customers and administrators. Key objectives include:
+
+Showcasing Products: Presenting a detailed, visually appealing catalog of rental furniture and decor items for various events, making it easy for customers to browse options online.
+
+Streamlining Bookings: Implementing an intuitive booking system that enables customers to check availability, reserve items, and receive instant confirmation, all from the comfort of their own homes.
+
+Digitizing Operations: Automating traditional, manual processes such as product selection, user registration, rental booking, order tracking, and inventory management, thereby reducing errors and saving time.
+
+Enhancing Customer Experience: Providing a user-friendly interface with features like product filtering, easy navigation, and real-time updates to improve satisfaction and encourage repeat business.
+
+Empowering Administrators: Equipping the business with a centralized dashboard to efficiently manage products, users, and bookings, and to monitor overall business performance.
+
+By developing this system, our team seeks to bridge the gap between traditional business practices and modern digital solutions, ultimately helping Sadguru Tent House expand its reach, improve operational efficiency, and deliver a superior customer experience. This project not only fulfills our academic requirements but also demonstrates the practical impact that technology can have on supporting and growing small, family-run businesses in today’s digital economy.
+
+Justification and Need for the System:
+
+In an increasingly digital world, customers expect businesses to provide online services that are easy to use, transparent, and accessible at any time. The development of a professional website for Sadguru Tent House aims to:
+
+Enhance Digital Reach: The website will serve as a virtual storefront, showcasing available furniture for rent, service options, and rental terms to a broader audience.
+
+Simplify the Booking Process: With an integrated booking system, customers can easily view available products, make reservations online, and receive instant booking confirmations, reducing reliance on phone or in-person interactions.
+
+Streamline Inventory and Order Management: The system will offer an efficient way to track inventory, manage bookings, and maintain a well-organized record of rental items, helping to prevent double-bookings and other scheduling errors.
+
+Improve Customer Experience: A user-friendly, accessible platform will allow customers to browse products and services on their terms, improving satisfaction and encouraging repeat business.
+
+This system will reduce manual workload, improve booking accuracy, and elevate the customer service experience, thereby positioning Sadguru Tent House for growth and digital relevance.
+
+1.3 Purpose, Scope, and Applicability
+
+1.3.1 Purpose
+
+The purpose of this project is to develop a robust and user-friendly online platform for Sadguru Tent House, a family-owned event furniture rental business. This platform aims to digitize and streamline the entire rental process, from showcasing products and managing inventory to booking and order tracking. By creating a professional website tailored to the specific needs of Sadguru Tent House, the project seeks to enhance business efficiency, improve customer experience, and support the digital transformation of a local enterprise owned by one of our team members’ families.
+
+1.3.2 Scope
+
+The scope of this project encompasses the analysis, design, development, testing, and deployment of a web-based furniture rental system. Key features and functionalities included within the project scope are:
+
+Product Catalog: Online display of available furniture and decor items with images, descriptions, and pricing.
+
+User Registration and Login: Secure registration and authentication for customers and administrators.
+
+Booking System: Real-time product availability, booking, and instant confirmation for customers.
+
+Order Management: Tracking and management of customer orders and rental history.
+
+Inventory Management: Tools for administrators to manage product listings, availability, and prevent double-bookings.
+
+Admin Dashboard: Centralized control panel for business owners to oversee users, orders, and inventory.
+
+Responsive Design: Accessibility across devices including desktops, tablets, and smartphones.
+
+The project does not include the development of a mobile app, integration with third-party payment gateways (unless specified), or advanced analytics features beyond basic order and inventory tracking.
+
+1.3.3 Applicability
+
+This system is specifically designed for Sadguru Tent House and is directly applicable to small and medium-sized event furniture rental businesses seeking to modernize their operations. The platform can be adapted for similar rental businesses that require online product showcasing, customer booking, and inventory management. While the system is tailored to the needs of a family-owned business, its modular design allows for future scalability and customization to suit broader applications within the event rental industry.
+
+1.4 Achievements
+
+The development and launch of the Sadguru Tent House online furniture rental platform represent a significant step forward for both the business and our project team. The following achievements highlight the impact and value delivered through this initiative:
+
+Digital Transformation of a Family Business: Successfully transitioned Sadguru Tent House-a family-owned business of one of our team members-from a traditional, offline operation to a modern, digital platform. This shift aligns with industry trends and customer expectations for online accessibility and convenience41.
+
+Professional Virtual Storefront: Created a visually appealing, easy-to-navigate website that serves as a comprehensive virtual storefront. Customers can now browse a curated catalog of event furniture, view detailed product information, and explore service options at any time15.
+
+Seamless Online Booking and Order Management: Implemented an intuitive booking system allowing customers to check product availability, make reservations, and receive instant confirmations online. This automation streamlines the rental process, reduces manual workload, and minimizes errors such as double-bookings14.
+
+Centralized Inventory and Administrative Dashboard: Developed a backend system for administrators to efficiently manage inventory, bookings, and customer data through a centralized dashboard. This improvement enhances operational efficiency and provides better oversight for business owners14.
+
+Enhanced Customer Experience: Improved user experience with features such as product filtering, responsive design for mobile and desktop, and transparent pricing. These enhancements make it easier for customers to find, select, and book rental items, leading to increased satisfaction and loyalty15.
+
+Support for Business Growth: Positioned Sadguru Tent House for future growth by expanding its digital reach, attracting new customers beyond the local community, and enabling the business to compete with larger, tech-enabled rental companies41.
+
+Real-World Learning and Impact: For our team, this project provided practical experience in full-stack web development, UI/UX design, and digital business transformation. It also demonstrated how technology can directly support and elevate small, family-run enterprises in a competitive market41.
+
+These achievements collectively demonstrate the successful realization of our project objectives and the tangible benefits delivered to both the business and its customers.
+
+1.5 Organisation of Report
+
+This project report is structured to provide a comprehensive overview of the development process, technical implementation, and outcomes of the Sadguru Tent House furniture rental website. The organization of the report follows a logical sequence, ensuring clarity and ease of reference for readers. Each section addresses a specific aspect of the project, from initial background research to final achievements and future recommendations.
+
+The report is organized as follows:
+
+Chapter 1: IntroductionPresents the background, objectives, purpose, scope, applicability, achievements, and overall context of the project.
+
+Chapter 2: Literature Review / Related WorkReviews existing systems and technologies relevant to online furniture rental platforms, highlighting their features and limitations.
+
+Chapter 3: System AnalysisDetails the problem statement, requirements gathering, and analysis of the current challenges faced by the business.
+
+Chapter 4: System DesignDescribes the proposed system architecture, database design, user interface layouts, and overall design considerations.
+
+Chapter 5: ImplementationExplains the development process, technologies used, and key implementation steps for both frontend and backend components.
+
+Chapter 6: Testing and EvaluationOutlines the testing strategies, test cases, and evaluation of system performance and user feedback.
+
+Chapter 7: Results and DiscussionPresents the outcomes of the project, discusses the effectiveness of the solution, and compares it with initial objectives.
+
+Chapter 8: Conclusion and Future ScopeSummarizes the project findings, highlights key achievements, and suggests possible enhancements or future work.
+
+ReferencesLists all sources, research papers, and materials referenced during the project.
+
+AppendicesIncludes supplementary materials such as code snippets, screenshots, organizational charts, and additional documentation.
+
+CHAPTER 2: SURVEY OF TECHNOLOGIES
+
+2.1 Introduction
+
+This chapter surveys the technologies and tools used in the development of the Sadguru Tent House furniture rental website. It outlines the hardware and software requirements, compares potential options, and explains the rationale for the final technology stack selection, ensuring the platform is robust, user-friendly, and scalable for a family-owned business.
+
+2.2 List of Technologies Used
+
+Frontend Technologies
+
+HTML5: Provides the structure and content for all web pages.
+
+CSS3: Responsible for the design, layout, and visual styling of the website.
+
+JavaScript: Adds interactivity and dynamic features to the user interface.
+
+Bootstrap: A CSS framework that ensures the website is responsive and visually consistent across devices.
+
+Backend Technologies
+
+PHP: Handles server-side scripting, business logic, and database interactions.
+
+XAMPP: An open-source local development environment that bundles Apache server, PHP, and MySQL, used for building and testing the website before deployment.
+
+Database
+
+MySQL (via XAMPP): Stores and manages all data, including user accounts, product listings, bookings, and order history.
+
+Development Tools
+
+Visual Studio Code: Used as the primary code editor for writing and debugging code.
+
+Git: Facilitates version control and collaborative development among team members.
+
+Web Browsers (Chrome, Firefox, etc.): Used for testing and validating the website’s appearance and functionality.
+
+Technology
+
+Advantages
+
+Disadvantages
+
+Suitability for Project
+
+PHP
+
+Easy to learn, integrates well with MySQL, widely supported
+
+Less modern than some alternatives
+
+Well-suited for web projects, team familiarity
+
+XAMPP
+
+Simple setup, all-in-one package, cross-platform
+
+Not for production deployment
+
+Ideal for local development and testing
+
+MySQL
+
+Open-source, reliable, widely used with PHP
+
+Limited advanced features vs. some enterprise DBs
+
+Perfect for small to medium web applications
+
+Bootstrap
+
+Responsive design, speeds up UI development
+
+Can look generic without customization
+
+Ensures mobile-friendly, modern design
+
+2.3 Justification for Selected Technologies
+
+Frontend: HTML5, CSS3, JavaScript, and Bootstrap were chosen for their ease of use, flexibility, and ability to create a responsive, visually appealing user interface.
+
+Backend: PHP was selected due to its compatibility with MySQL, simplicity, and the team's experience.
+
+Database: MySQL, included in XAMPP, is reliable and seamlessly integrates with PHP, making it suitable for managing user data, products, and bookings.
+
+Development Environment: XAMPP was used for local development as it provides an easy way to run Apache, PHP, and MySQL together, streamlining setup and testing.
+
+Tools: Visual Studio Code and Git ensured efficient code writing, debugging, and version control.
+
+This stack was chosen for its accessibility, reliability, and suitability for small business web applications, enabling the team to deliver a robust solution tailored to Sadguru Tent House.
+
+2.4 System Architecture Overview
+
+The system follows a classic three-tier web architecture:
+
+Presentation Layer (Frontend): Built with HTML, CSS, JavaScript, and Bootstrap, providing all user-facing pages and forms.
+
+Application Layer (Backend): PHP scripts process user requests, handle business logic, and communicate with the database.
+
+Data Layer (Database): MySQL stores all persistent data, including user details, products, and bookings.
+
+This architecture ensures maintainability, scalability, and a clear separation of concerns, supporting both customer and administrative functionalities.
+
+CHAPTER 3: REQUIREMENTS AND ANALYSIS
+
+3.1 Problem Definition
+
+Sadguru Tent House, a family-owned furniture rental business, faces significant challenges in adapting to the digital expectations of modern customers. Currently, bookings and inventory management are handled manually through phone calls and in-person visits, resulting in limited reach, inefficient processes, and frequent errors such as double-bookings. Customers lack an accessible platform to view products, check availability, and make reservations online, which reduces service efficiency and customer satisfaction. The core problem is the absence of a centralized, user-friendly digital system for managing and streamlining the rental process, which is necessary for business growth and improved customer experience.
+
+3.2 Requirements Specification
+
+A Software Requirements Specification (SRS) ensures that the system fulfills business needs, user expectations, and technical constraints. The key requirements for the Sadguru Tent House platform are:
+
+Functional Requirements:
+
+User registration and login for customers and administrators
+
+Product catalog with images, descriptions, and real-time availability
+
+Online booking system with confirmation and order tracking
+
+Administrative dashboard for managing products, orders, and users
+
+Inventory management to prevent double-bookings
+
+Responsive design for accessibility on desktops and mobile devices
+
+Non-Functional Requirements:
+
+Secure handling of user data and transactions
+
+Fast response time and high availability
+
+Scalability to support more users and products in the future
+
+Maintainability for future updates and enhancements
+
+Constraints:
+
+Must operate on standard web browsers
+
+Should integrate with existing business workflows
+
+Data privacy and security compliance
+
+3.3 Planning and Scheduling
+
+Project planning and scheduling involved defining the scope, breaking down the project into manageable tasks, assigning roles, and setting milestones512. The key steps included:
+
+Project Scope Definition: Develop a web-based furniture rental platform with essential features for customers and administrators.
+
+Action Plan:
+
+Requirements gathering and analysis
+
+System design (UI/UX, database, architecture)
+
+Development (frontend and backend)
+
+Testing and debugging
+
+Deployment and user training
+
+Resource Allocation: Assign tasks among team members (frontend, backend, content, testing).
+
+Milestones and Timeline:
+
+Requirement analysis: 1 week
+
+Design: 2 weeks
+
+Development: 4 weeks
+
+Testing: 1 week
+
+3.4 Software and Hardware Requirements
+
+Hardware Requirements:
+
+Server with at least 16 GB RAM, multi-core processor, and 1 TB storage for hosting
+
+Client devices: Any PC, laptop, tablet, or smartphone with a modern web browser
+
+Software Requirements:
+
+Frontend: HTML5, CSS3, JavaScript, Bootstrap
+
+Backend: PHP
+
+Database: MySQL (via XAMPP)
+
+Development Tools: Visual Studio Code, Git, XAMPP for local development
+
+Browsers: Chrome, Firefox, Edge, or Safari
+
+3.5 Preliminary Product Description
+
+The proposed system is a web-based platform that acts as a virtual storefront for Sadguru Tent House. It allows customers to browse available furniture, register and log in, book items for events, and track their orders. Administrators can manage inventory, bookings, and user accounts through a secure dashboard. The platform automates and streamlines the rental process, reduces manual errors, and improves customer experience by providing 24/7 online access to services713.
+
+3.6 Conceptual Models
+
+Conceptual models are used to visually and logically represent the structure and processes of the proposed system:
+
+Entity-Relationship (ER) Diagram: Illustrates the main entities (Users, Products, Orders, Admins) and their relationships.
+
+Data Flow Diagram (DFD): Shows how data moves through the system, from user input to order processing and inventory updates.
+
+Use Case Diagram: Depicts the interactions between users (customers, admins) and the system’s functionalities (search, book, manage inventory).
+
+Workflow/Process Flowcharts: Detail step-by-step processes such as user registration, booking, and order management.
+
+These models help clarify system requirements, define project scope, and guide the design and development process.
+
+4. SYSTEM DESIGN
+
+4.1 Basic Modules
+
+User Management:Registration, login, profile, and secure password storage (user_cred).
+
+Product Management:CRUD for products, product images, features, and facilities (products, product_images, product_features, product_facilities, features, facilities).
+
+Booking/Order Management:Place, view, and cancel bookings. Tracks status, rental period, and order history (booking_order).
+
+Admin Management:Admin authentication and dashboard for managing products, users, orders, carousel, reviews, and site settings (admin_cred, carousel, review, settings, team_details).
+
+Content & Feedback Management:Handles contact details, user queries, reviews, and team info (contact_details, user_queries, review, team_details).
+
+4.2 Data Design
+
+Main Tables & Relationships
+
+Table
+
+Key Fields (PK = Primary Key, FK = ForeignKey)
+
+Description
+
+user_cred
+
+id (PK), name, email, password, address, phonenum, pincode
+
+Registered users
+
+admin_cred
+
+sr_no. (PK), admin_name, admin_pass
+
+Admin accounts
+
+products
+
+id (PK), name, price, quantity, description, status, removed
+
+Furniture inventory
+
+product_images
+
+sr_no (PK), product_id (FK), image, thumb
+
+Images for each product
+
+features
+
+id (PK), name
+
+Master features list
+
+product_features
+
+sr_no (PK), product_id (FK), features_id (FK)
+
+Features assigned to products
+
+facilities
+
+id (PK), icon, name, description
+
+Master facilities list
+
+product_facilities
+
+sr_no (PK), product_id (FK), facilities_id (FK)
+
+Facilities assigned to products
+
+booking_order
+
+booking_id (PK), user_id (FK), product_id (FK), ...
+
+Rental orders
+
+carousel
+
+sr_no (PK), image
+
+Homepage carousel images
+
+review
+
+sr (PK), name, message, allow
+
+Customer reviews
+
+settings
+
+sr_no (PK), site_title, site_about, shutdown
+
+Site-wide settings
+
+team_details
+
+sr_no (PK), name, picture
+
+Team member info
+
+contact_details
+
+sr_no (PK), address, gmap, pn1, pn2, email, fb, insta, tw, iframe
+
+Contact and social info
+
+user_queries
+
+sr_no (PK), name, email, subject, message, date, seen
+
+User-submitted queries
+
+Relationships:
+
+booking_order.user_id → user_cred.id
+
+booking_order.product_id → products.id
+
+product_images.product_id, product_features.product_id, product_facilities.product_id → products.id
+
+product_features.features_id → features.id
+
+product_facilities.facilities_id → facilities.id
+
+Data Constraints & Integrity
+
+Primary keys on all tables.
+
+Foreign keys for referential integrity (see above).
+
+NOT NULL on essential fields.
+
+Unique constraint on user emails.
+
+Password stored as a secure hash
+
+Auto-increment for all PKs.
+
+4.3 Procedural Design
+
+4.3.1 Logic Diagrams
+
+User Registration Flow
+
+Product Booking Process
+
+Admin Order Management
+
+4.3.2 Data Structures
+
+User Sessions (Hash Table):
+
+php
+
+$_SESSION = [
+
+'user_id' => 5,
+
+'email' => 'sumit@sadhguru.com',
+
+'role' => 'user/admin'
+
+];
+
+Product Catalog (Array of Objects):
+
+php
+
+$products = [
+
+[
+
+'id' => 9,
+
+'name' => 'Chairs',
+
+'price' => 12,
+
+'quantity' => 2000,
+
+'images' => ['IMG_61027.jpg']  ]];
+
+Booking Order (Relational Structure):
+
+sql
+
+booking_order: {
+
+booking_id (PK),
+
+user_id (FK → user_cred),
+
+product_id (FK → products),
+
+rent_in DATE,
+
+rent_out DATE,
+
+quantity_p INT}
+
+Product Features (Many-to-Many Mapping):
+
+sql
+
+product_features: [
+
+{product_id:9, feature_id:18},  // Steel Frame
+
+{product_id:9, feature_id:19}   // Banquet Design
+
+]
+
+4.3.3 Algorithms Design
+
+1. Password Hashing (PHP)
+
+php
+
+function register_user($password) {
+
+$hashed = password_hash($password, PASSWORD_BCRYPT);
+
+// Store in user_cred.password
+
+}
+
+2. Availability Check (SQL)
+
+sql
+
+SELECT quantity
+
+FROM products
+
+WHERE id = :product_id
+
+AND quantity >= :requested_qty;
+
+3. Booking Cost Calculation
+
+php
+
+function calculate_cost($product_id, $days) {
+
+$price = get_from_db("SELECT price FROM products WHERE id = $product_id");
+
+return $price * $days;
+
+}
+
+4. Inventory Update on Booking
+
+sql
+
+START TRANSACTION;
+
+UPDATE products SET quantity = quantity - :qty WHERE id = :product_id;
+
+INSERT INTO booking_order (...) VALUES (...);
+
+COMMIT;
+
+5. Product Search with Filters
+
+php
+
+function search_products($filters) {
+
+$query = "SELECT * FROM products WHERE 1=1";
+
+if($filters['price_max'])
+
+$query .= " AND price <= ".$filters['price_max'];
+
+if($filters['category'])
+
+$query .= " AND id IN (SELECT product_id FROM product_features WHERE feature_id = ".$filters['category'].")";
+
+// Execute query
+
+}
+
+Key Implementation Notes:
+
+Uses ACID-compliant transactions for critical operations (booking/inventory updates)
+
+BCrypt for secure password storage (as seen in user_cred table)
+
+JOIN queries for product-feature relationships:
+
+sql
+
+SELECT p.*, f.name
+
+FROM products p
+
+JOIN product_features pf ON p.id = pf.product_id
+
+JOIN features f ON pf.features_id = f.id;
+
+Indexes on foreign keys (user_id, product_id) for fast querying
+
+This design ensures efficient processing of core business logic while maintaining data integrity through relational database constraints.
+
+4.4 User Interface Design
+
+Home Page:Carousel images, featured products, navigation.
+
+Product Page:Product details, images, features, facilities, booking form.
+
+User Dashboard:View/cancel orders, update profile.
+
+Admin Dashboard:Manage products, orders, users, carousel, reviews, settings.
+
+Contact/Feedback:Contact info, query form, review submission.
+
+Responsive Design:Bootstrap for mobile and desktop compatibility.
+
+4.5 Security Issues
+
+Password Security:Passwords hashed (bcrypt).
+
+SQL Injection Prevention:Use prepared statements in PHP.
+
+Session Management:Secure session tokens, session timeout.
+
+Role-Based Access:Only admins access admin features.
+
+Input Validation:All user inputs validated server-side
+
+4.6 Test Cases Design
+
+Test Case
+
+Steps
+
+Expected Result
+
+Register User
+
+Unique email, valid info
+
+New user in user_cred
+
+Login User
+
+Valid credentials
+
+Dashboard access
+
+Add Product (Admin)
+
+Fill out the product form, submit
+
+Product appears in products
+
+Place Booking
+
+Select product, dates, quantity, and submit
+
+Booking in booking_order, quantity reduced
+
+Cancel Booking
+
+User cancels order
+
+Cancel updated, quantity restored
+
+Add Review
+
+Submit review
+
+Review in review, pending approval
+
+Update Order Status
+
+Admin changes status
+
+Status updated in booking_order
+
+Note:
+
+Fields like trans_amt and trans_status in booking_order are used for order status tracking only, not for online payment processing.
+
+All payments are assumed to be handled offline or on delivery, not through the website.
+
+CHAPTER 5: IMPLEMENTATION AND TESTING
+
+5.1 Implementation Approaches
+
+The implementation of the Sadguru Tent House furniture rental website followed an incremental development approach, which allowed for progressive building and testing of features. Key implementation strategies included:
+
+Model-View-Controller (MVC) Pattern: Separating business logic, data, and presentation to ensure code maintainability and clarity.
+
+Progressive Enhancement: Building core functionality first, then enhancing with additional features like image galleries and review systems.
+
+Responsive Design Implementation: Using the Bootstrap framework to ensure a mobile-first design that works across all devices.
+
+Database-Driven Content: Creating dynamic pages that pull content from the Mysql database rather than static HTML pages.
+
+User-Centric Development: Prioritising user flows for furniture browsing, booking, and order management based on customer needs.
+
+5.2 Coding Details and Code Efficiency
+
+The implementation uses PHP for server-side scripting with a MySQL database. Key coding details include:
+
+Modular Development: Separate PHP scripts for user authentication, product management, and booking systems.
+
+Database Interactions: Using prepared statements with PDO for all database operations to prevent SQL injection.
+
+Session Management: Secure user sessions with appropriate timeout settings.
+
+5.2.1 Code Efficiency
+
+Several techniques were implemented to ensure code efficiency:
+
+Minification: CSS and JavaScript files were minified to reduce file size and improve load times.
+
+Image Optimisation: All product images were compressed and stored with appropriate formats (JPG).
+
+Database Indexing: Key fields like product_id, user_id, and search-related columns were indexed to improve query performance.
+
+Caching: Implementation of browser caching for static assets to reduce server load.
+
+Lazy Loading: Product images are loaded only when scrolled into view, improving initial page load speed.
+
+5.3 Testing Approach
+
+The website underwent comprehensive testing to ensure functionality, usability:
+
+Development Testing: Continuous testing during development using XAMPP local environment.
+
+Cross-Browser Testing: Ensuring compatibility across Chrome, Firefox, Safari, and Edge.
+
+Responsive Testing: Verification of proper display and functionality on various devices and screen sizes.
+
+5.3.1 Unit Testing
+
+Unit testing focused on individual components to ensure they functioned as expected:
+
+User Authentication: Testing registration, login, and password recovery processes.
+
+Product Management: Verifying CRUD operations for products, features, and facilities.
+
+Booking System: Testing order creation, status updates, and inventory adjustments.
+
+Form Validation: Ensuring all forms properly validate inputs before processing.
+
+5.3.2 Integrated Testing
+
+Integrated testing examined how different components worked together:
+
+End-to-End User Journeys: Testing complete workflows from registration to successful booking.
+
+Database Integrity: Verifying that related records maintain proper relationships during operations.
+
+Admin-User Interactions: Testing how admin actions affected user-facing elements.
+
+Order Processing Flow: Validating the entire booking process from selection to confirmation.
+
+5.4 Modifications and Improvements
+
+Throughout development, several modifications and improvements were implemented:
+
+UI Enhancements: Based on user feedback, the interface was refined for better usability.
+
+Performance Optimisations: Database queries were optimised to reduce page load times.
+
+Additional Features: Added review system and product filtering based on features/facilities.
+
+Mobile Responsiveness: Improved mobile experience based on testing on various devices.
+
+Security Hardening: Implemented additional security measures like password hashing and secure sessions.
+
+Future improvement possibilities include:
+
+Integration with payment gateways for online transactions
+
+Enhanced admin analytics dashboard
+
+Implementation of a recommendation system based on user preferences
+
+CHAPTER 6: RESULTS AND DISCUSSION
+
+6.1 Test Reports
+
+Overview:This section summarizes the testing conducted on the Sadguru Tent House Furniture Rental Website. Testing covered all major modules, including user registration, login, product booking, admin management, and security.
+
+Test Summary:
+
+Total Test Cases Executed: 9 main scenarios (with sub-cases)
+
+Pass Percentage: 100%
+
+Testing Approach: Manual testing on XAMPP local server, using Chrome and Firefox browsers, and different user/admin accounts.
+
+Environment: Windows 10, PHP 8.x, MariaDB/MySQL, XAMPP 8.x
+
+Test Case ID
+
+Test Scenario
+
+Test Steps / Inputs
+
+Expected Outcome
+
+Result
+
+TC001
+
+User Registration
+
+Enter valid user details and submit.
+
+User registered successfully.
+
+PASS
+
+Enter already registered email and submit.
+
+Error: Email already taken.
+
+PASS
+
+Enter already registered phone number and submit.
+
+Error: Phone number already taken.
+
+PASS
+
+TC002
+
+User Login
+
+Enter valid credentials and submit.
+
+User logged in successfully.
+
+PASS
+
+Enter invalid credentials and submit.
+
+Error: Invalid credentials.
+
+PASS
+
+TC003
+
+Book Product
+
+Logged-in user books a product.
+
+Order confirmation displayed.
+
+PASS
+
+Not logged in, tries to book.
+
+Error: Please log in.
+
+PASS
+
+TC004
+
+Add Product (Admin)
+
+Admin adds product with features and facilities.
+
+Product visible to users.
+
+PASS
+
+Admin deletes product.
+
+Product removed from website.
+
+PASS
+
+Admin adds images to product.
+
+Images displayed with product.
+
+PASS
+
+TC005
+
+Filter / Search
+
+Search by category or advanced filters.
+
+Filtered products shown.
+
+PASS
+
+TC006
+
+User Dashboard
+
+Navigate to dashboard, edit credentials.
+
+Dashboard opens, details updated.
+
+PASS
+
+TC007
+
+Security & Error Handling
+
+Enter sensitive info or invalid input.
+
+Data secure, error messages shown.
+
+PASS
+
+TC008
+
+Admin Login
+
+Enter correct/incorrect admin credentials.
+
+Dashboard opens or error shown.
+
+PASS
+
+TC009
+
+Shutdown (Admin)
+
+Admin shuts down site, user tries to book.
+
+Booking disabled for all users.
+
+PASS
+
+Discussion:All critical functionalities were tested and passed successfully. The system correctly handled valid and invalid inputs, enforced security (e.g., password hashing, error messages), and maintained data integrity. Admin and user roles were validated, and booking/shutdown logic worked as intended. No critical bugs were found during final testing.
+
+6.2 User Documentation
+
+Purpose:This section provides clear instructions for both customers and admins to use the website effectively.
+
+For Customers:
+
+Registration:Go to the Sign Up page, fill in your name, email, phone, address, pincode, and password, then submit. You’ll see a confirmation if successful.
+
+Login:Enter your registered email and password on the Login page.
+
+Browse & Search Products:Use the Home or Products page to browse all available furniture. Use the search bar or filters to find items by category, features, or price.
+
+Book Products:Click “Book” on your desired product, select rental dates and quantity, and submit your booking. You will see a confirmation and your order will appear in your dashboard.
+
+User Dashboard:Access your dashboard to view orders, cancel bookings, or edit your profile.
+
+Submit Reviews/Queries:Use the review or contact form to send feedback or questions.
+
+For Admins:
+
+Admin Login:Go to the Admin Login page and enter your admin credentials.
+
+Manage Products:Add, update, or delete products, upload images, and assign features/facilities.
+
+Manage Orders:View all bookings, update order statuses (confirmed, canceled), and handle customer requests.
+
+Site Settings:Update contact details, homepage carousel, and shutdown the site if needed.
+
+Review Moderation:Approve or reject customer reviews for display.
+
+CHAPTER 7: CONCLUSIONS
+
+7.1 Conclusion
+
+The Sadguru Tent House furniture rental website successfully digitizes the traditional event furniture rental process for a family-owned business. The system provides an intuitive online platform where customers can browse products, make bookings, and manage their orders, while administrators can efficiently manage inventory, orders, and customer queries. Rigorous testing confirmed that the system meets its objectives: improving operational efficiency, reducing manual errors, and enhancing customer experience. This project demonstrates the practical application of web technologies (PHP, MySQL, Bootstrap) in solving real-world business problems and highlights the value of digital transformation for small enterprises.
+
+7.2 Limitations of the System
+
+Despite its strengths, the system has some limitations:
+
+No Online Payment Integration: All payments are tracked as status only; actual transactions are handled offline.
+
+Basic Analytics: The admin dashboard provides only simple order and inventory management, lacking advanced analytics or reporting.
+
+Limited Notification System: There is no automated email/SMS notification for bookings or order status updates.
+
+Single-Location Support: The system is designed for a single business location and does not support multi-branch management.
+
+Manual Review Moderation: Customer reviews require manual approval by the admin, which may delay feedback display.
+
+User Interface: While responsive, the UI could be further improved for accessibility and modern design standards.
+
+7.3 Future Scope of the Project
+
+There are several avenues for future enhancement:
+
+Online Payment Gateway: Integrate secure online payment options for seamless transactions.
+
+Automated Notifications: Add email and SMS notifications for booking confirmations, reminders, and status updates.
+
+Advanced Analytics: Implement dashboards with sales trends, customer insights, and inventory forecasting.
+
+Multi-Branch Support: Extend the system to manage multiple locations or franchises.
+
+Mobile App: Develop a dedicated mobile application for customers and admins.
+
+Enhanced Security: Introduce two-factor authentication and advanced access controls.
+
+API Integration: Allow third-party services (e.g., event planners) to interact with the system via APIs.
+
+Self-Service Review Moderation: Implement automated moderation tools for customer reviews.
+
+References
+
+L. Bass, P. Clements, and R. Kazman, Software Architecture in Practice, 2nd ed. Reading, MA: Addison Wesley, 2003.
+
+D. Sarunyagate, Ed., Lasers. New York: McGraw-Hill, 1996.
+
+G. O. Young, "Synthetic structure of industrial plastics," in Plastics, 2nd ed., vol. 3, J. Peters, Ed. New York: McGraw-Hill, 1964, pp. 15-64.
+
+G. Liu, K. Y. Lee, and H. F. Jordan, "TDM and TWDM de Bruijn networks and shufflenets for optical communications," IEEE Trans. Comp., vol. 46, pp. 695-701, June 1997.
+
+H. Ayasso and A. Mohammad-Djafari, "Joint NDT Image Restoration and Segmentation Using Gauss–Markov–Potts Prior Models and Variational Bayesian Computation," IEEE Transactions on Image Processing, vol. 19, no. 9, pp. 2265-77, 2010. [Online]. Available: IEEE Xplore, http://www.ieee.org. [Accessed Sept. 10, 2010].
+
+PHP Manual: PHP Data Objects (PDO). [Online]. Available: https://www.php.net/manual/en/book.pdo.php [Accessed May 6, 2025].
+
+Bootstrap Documentation. [Online]. Available: https://getbootstrap.com/docs/5.0/getting-started/introduction/ [Accessed May 6, 2025].
+
+MySQL Reference Manual. [Online]. Available: https://dev.mysql.com/doc/ [Accessed May 6, 2025].
+
+W3Schools, "SQL Tutorial." [Online]. Available: https://www.w3schools.com/sql/ [Accessed May 6, 2025].
+
+Stack Overflow, "How to use PDO in PHP." [Online]. Available: https://stackoverflow.com/questions/13569/how-to-use-pdo-in-php [Accessed May 6, 2025].
+
+IEEE Citation Guidelines, [Online]. Available: https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%20Citation%20Guidelines.pdf [Accessed May 6, 2025].
+
+Glossary
+
+Term
+
+Definition
+
+Admin
+
+A privileged user who manages products, bookings, users, reviews, and site settings.
+
+Backend
+
+The server-side part of the website, responsible for business logic, database interactions, and security.
+
+Bootstrap
+
+A popular CSS framework used to create responsive and mobile-first web pages.
+
+CRUD
+
+Create, Read, Update, Delete – the four basic operations for managing records in a database.
+
+Database Schema
+
+The structure that defines the organization of data in a relational database, including tables and keys.
+
+Entity-Relationship (ER) Diagram
+
+A visual representation of entities (tables) and their relationships in a database.
+
+Facilities
+
+Additional services or amenities offered with furniture rentals, such as delivery or setup.
+
+Feature
+
+A characteristic or attribute of a furniture product (e.g., stackable, velvet, foldable).
+
+Frontend
+
+The client-side part of the website that users interact with, built using HTML, CSS, JavaScript, etc.
+
+Foreign Key
+
+A field in a table that links to the primary key of another table, establishing a relationship.
+
+Glossary
+
+A list of terms and their definitions used in the project documentation.
+
+InnoDB
+
+A storage engine for MySQL supporting transactions and foreign keys.
+
+MVC
+
+Model-View-Controller, a design pattern that separates data, user interface, and control logic.
+
+PDO
+
+PHP Data Objects, a database access layer in PHP for secure and flexible database interactions.
+
+Primary Key
+
+A unique identifier for a record in a database table.
+
+Product
+
+Any furniture item available for rent on the website.
+
+Responsive Design
+
+Web design approach ensuring the site works well on desktops, tablets, and mobiles.
+
+Session
+
+A server-side storage of user data to maintain state across multiple pages.
+
+SQL Injection
+
+A security vulnerability where an attacker can manipulate SQL queries; prevented using prepared statements.
+
+Test Case
+
+A set of conditions or variables used to determine if a system works as intended.
+
+User
+
+A customer who registers, browses, and books furniture through the website.
+
+ANNEXURE A: COMPLETE SQL DATABASE SCHEMA
+
+Below is the SQL schema used for the Sadguru Tent House Furniture Rental Website. This schema defines all tables, fields, primary keys, foreign keys, and relationships used in the system.
+
+Table: admin_cred
+
+sql
+
+CREATE TABLE `admin_cred` (
+
+`sr_no.` int(11) NOT NULL AUTO_INCREMENT,
+
+`admin_name` varchar(150) NOT NULL,
+
+`admin_pass` varchar(150) NOT NULL,
+
+PRIMARY KEY (`sr_no.`)
+
+)
+
+Table: booking_order
+
+sql
+
+CREATE TABLE `booking_order` (
+
+`booking_id` int(11) NOT NULL AUTO_INCREMENT,
+
+`user_id` int(11) NOT NULL,
+
+`product_id` int(11) NOT NULL,
+
+`product_name` varchar(100) NOT NULL,
+
+`user_name` varchar(100) NOT NULL,
+
+`phonenum` varchar(100) NOT NULL,
+
+`address` varchar(100) NOT NULL,
+
+`product_no` int(100) NOT NULL,
+
+`quantity_p` varchar(3000) NOT NULL,
+
+`rent_in` date NOT NULL,
+
+`rent_out` date NOT NULL,
+
+`arrival` int(11) NOT NULL DEFAULT 0,
+
+`cancel` int(11) NOT NULL DEFAULT 0,
+
+`booking_status` int(11) NOT NULL DEFAULT 0,
+
+`trans_amt` int(11) NOT NULL,
+
+`trans_status` varchar(100) NOT NULL DEFAULT 'pending',
+
+`trans_res_msg` varchar(200) DEFAULT NULL,
+
+`rate_review` int(11) DEFAULT NULL,
+
+`datentime` datetime NOT NULL DEFAULT current_timestamp(),
+
+PRIMARY KEY (`booking_id`)
+
+)
+
+Table: carousel
+
+sql
+
+CREATE TABLE `carousel` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`image` varchar(150) NOT NULL,
+
+PRIMARY KEY (`sr_no`)
+
+)
+
+Table: contact_details
+
+sql
+
+CREATE TABLE `contact_details` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`address` varchar(50) NOT NULL,
+
+`gmap` varchar(100) NOT NULL,
+
+`pn1` varchar(30) NOT NULL,
+
+`pn2` varchar(30) NOT NULL,
+
+`email` varchar(100) NOT NULL,
+
+`fb` varchar(100) NOT NULL,
+
+`insta` varchar(100) NOT NULL,
+
+`tw` varchar(100) NOT NULL,
+
+`iframe` varchar(300) NOT NULL,
+
+PRIMARY KEY (`sr_no`)
+
+)
+
+Table: facilities
+
+sql
+
+CREATE TABLE `facilities` (
+
+`id` int(11) NOT NULL AUTO_INCREMENT,
+
+`icon` varchar(100) NOT NULL,
+
+`name` varchar(50) NOT NULL,
+
+`description` varchar(250) NOT NULL,
+
+PRIMARY KEY (`id`)
+
+)
+
+Table: features
+
+sql
+
+CREATE TABLE `features` (
+
+`id` int(11) NOT NULL AUTO_INCREMENT,
+
+`name` varchar(50) NOT NULL,
+
+PRIMARY KEY (`id`)
+
+)
+
+Table: products
+
+sql
+
+CREATE TABLE `products` (
+
+`id` int(11) NOT NULL AUTO_INCREMENT,
+
+`name` varchar(150) NOT NULL,
+
+`price` int(11) NOT NULL,
+
+`quantity` int(11) NOT NULL,
+
+`description` varchar(350) NOT NULL,
+
+`status` tinyint(4) NOT NULL DEFAULT 1,
+
+`removed` int(11) NOT NULL DEFAULT 0,
+
+PRIMARY KEY (`id`)
+
+)
+
+Table: product_facilities
+
+sql
+
+CREATE TABLE `product_facilities` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`product_id` int(11) NOT NULL,
+
+`facilities_id` int(11) NOT NULL,
+
+PRIMARY KEY (`sr_no`),
+
+KEY `facilities id` (`facilities_id`),
+
+KEY `room id` (`product_id`),
+
+CONSTRAINT `facilities id` FOREIGN KEY (`facilities_id`) REFERENCES `facilities` (`id`),
+
+CONSTRAINT `room id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+
+)
+
+Table: product_features
+
+sql
+
+CREATE TABLE `product_features` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`product_id` int(11) NOT NULL,
+
+`features_id` int(11) NOT NULL,
+
+PRIMARY KEY (`sr_no`),
+
+KEY `features id` (`features_id`),
+
+KEY `rm id` (`product_id`),
+
+CONSTRAINT `features id` FOREIGN KEY (`features_id`) REFERENCES `features` (`id`),
+
+CONSTRAINT `rm id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+
+)
+
+Table: product_images
+
+sql
+
+CREATE TABLE `product_images` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`product_id` int(11) NOT NULL,
+
+`image` varchar(150) NOT NULL,
+
+`thumb` tinyint(4) NOT NULL DEFAULT 0,
+
+PRIMARY KEY (`sr_no`),
+
+KEY `room_id` (`product_id`),
+
+CONSTRAINT `product_images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+
+)
+
+Table: review
+
+sql
+
+CREATE TABLE `review` (
+
+`sr` int(11) NOT NULL AUTO_INCREMENT,
+
+`name` varchar(50) NOT NULL,
+
+`message` varchar(300) NOT NULL,
+
+`allow` int(11) NOT NULL,
+
+PRIMARY KEY (`sr`)
+
+)
+
+Table: settings
+
+sql
+
+CREATE TABLE `settings` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`site_title` varchar(50) NOT NULL,
+
+`site_about` varchar(250) NOT NULL,
+
+`shutdown` tinyint(1) NOT NULL,
+
+PRIMARY KEY (`sr_no`)
+
+)
+
+Table: team_details
+
+sql
+
+CREATE TABLE `team_details` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`name` varchar(50) NOT NULL,
+
+`picture` varchar(150) NOT NULL,
+
+PRIMARY KEY (`sr_no`)
+
+)
+
+Table: user_cred
+
+sql
+
+CREATE TABLE `user_cred` (
+
+`id` int(11) NOT NULL AUTO_INCREMENT,
+
+`name` varchar(100) NOT NULL,
+
+`email` varchar(150) NOT NULL,
+
+`address` varchar(120) NOT NULL,
+
+`phonenum` varchar(100) NOT NULL,
+
+`pincode` int(11) NOT NULL,
+
+`profile` varchar(100) NOT NULL,
+
+`password` varchar(200) NOT NULL,
+
+`status` int(11) NOT NULL DEFAULT 1,
+
+`datentime` datetime NOT NULL DEFAULT current_timestamp(),
+
+PRIMARY KEY (`id`)
+
+)
+
+Table: user_queries
+
+sql
+
+CREATE TABLE `user_queries` (
+
+`sr_no` int(11) NOT NULL AUTO_INCREMENT,
+
+`name` varchar(50) NOT NULL,
+
+`email` varchar(150) NOT NULL,
+
+`subject` varchar(200) NOT NULL,
+
+`message` varchar(500) NOT NULL,
+
+`date` date NOT NULL DEFAULT current_timestamp(),
+
+`seen` tinyint(4) NOT NULL DEFAULT 0,
+
+PRIMARY KEY (`sr_no`)
+
+)
+
+Annexure B: User Manual
+
+This user manual provides a step-by-step guide to navigating and using the Sadguru Tent House Furniture Rental Website. It covers all major pages and features for both customers (users) and administrators.
+
+For Users
+
+1. Home Page
+
+Description:The landing page displays featured furniture, categories, and a search bar.
+
+How to Use:Browse featured products or use the search bar to find specific items. Click on categories for quick access to related products.
+
+Home Page
+
+2. Sign-in/Sign-up Page
+
+Description:Allows users to register a new account or log in to an existing one.
+
+How to Use:
+
+For new users: Click "Sign Up," fill in your details (name, email, phone, address, pincode, password), and submit.
+
+For existing users: Enter your email and password to log in.
+
+3. Product Listing Page
+
+Description:Displays all available products, with options to filter by category, price, or availability.
+
+How to Use:Use filters or the search bar to narrow down products. Click on any product to view more details.
+
+4. Product Details Page
+
+Description:Shows detailed information about a selected product, including images, features, facilities, price, and availability.
+
+How to Use:Review product details. Select rental dates and quantity, then click "Book Now" to initiate
+
+a booking.
+
+5. Booking Process
+
+Description:Allows logged-in users to book products for specific dates.
+
+How to Use:After choosing your product and filling booking details, confirm your booking. A confirmation message will appear.
+
+6. User Dashboard
+
+DescriptioA personalized area where users can view and manage their orders, bookings, and profile.
+
+How to Use:
+
+View current and past bookings.
+
+Cancel orders if needed.
+
+Edit your profile details.
+
+7. Review/Feedback Page
+
+Description:Allows users to submit reviews and feedback about their experience.
+
+How to Use:Fill in the review form and submit your feedback.
+
+8. Contact Page
+
+Description:Provides contact information and a form for user queries.
+
+How to Use:Use the form to send questions or requests to the business.
+
+9. Facilities Page (User Side)
+
+Description:The Facilities page provides users with detailed information about the additional services and amenities available with furniture rentals. These may include pre-booking options, delivery and setup, maintenance during events, easy payment options, discounts for long-term rentals, and more. Each facility is illustrated with an icon and a brief description to help users understand the value-added services offered by Sadguru Tent House.
+
+Features:
+
+Facility List: Shows all available facilities with icons and names.
+
+Facility Details: Clicking on a facility displays its description and any conditions (e.g., delivery charges, advance booking requirements).
+
+Visual Aids: Each facility is represented by a relevant image or icon for quick identification.
+
+Integration with Products: Users can see which facilities are available for each product on the product details page, or filter products based on required facilities.
+
+How to Use:
+
+Navigate to the Facilities page from the main menu or homepage.
+
+Browse the list of facilities to understand what services are available (e.g., Delivery and Setup, Maintenance During Events, Discounts for Long-Term Rentals).
+
+Click on a facility to view more details, if available.
+
+When booking a product, check the product details to see which facilities are included or optional for that item.
+
+Screenshot:
+
+10. About Page
+
+Description:The About page shares the story of Sadguru Tent House, its mission, values, and team members.
+
+How to Use:Read about the company’s background, see photos of the team, and understand what makes the business unique. This page helps build trust and a personal connection with customers.
+
+For Admins
+
+1. Admin Login Page
+
+Description:Secure login page for administrators.
+
+How to Use:Enter admin credentials to access the admin dashboard.
+
+2. Admin Dashboard
+
+Description:Central hub for managing products, users, orders, reviews, and site settings.
+
+How to Use:Use the sidebar or navigation to access different management sections.
+
+3. Product Management Page
+
+Description:Add, update, or delete products, manage product images, features, and facilities.
+
+How to Use:
+
+To add: Click "Add Product," fill in details, and save.
+
+To edit or delete: Select a product and choose the appropriate action.
+
+4. Order Management Page
+
+Description:View, update, or cancel customer orders.
+
+How to Use:Select an order to view details, update status, or cancel as needed.
+
+5. User Management Page
+
+Description:View and manage registered users.
+
+How to Use:Edit user information or deactivate accounts as required.
+
+6. Review Moderation Page
+
+Description:Approve or reject customer reviews before they appear on the site.
+
+How to Use:Review submitted feedback and click approve or reject.
+
+7. Site Settings Page
+
+Description:Update business information, contact details, homepage carousel, and manage site shutdown.
+
+How to Use:Edit settings as needed and save changes.
+
+8. Add Image to Carousel (Admin)
+
+Description:This page allows the administrator to upload new images to the homepage carousel, which displays rotating banners or featured images on the website’s home page.
+
+How to Use:
+
+Log in as admin and navigate to the “Carousel Management” or “Add Carousel Image” section in the admin dashboard.
+
+Click the “Add New Image” or “Upload Image” button.
+
+Choose an image file from your computer (supported formats: JPG, PNG, etc.).
+
+Optionally, add a caption or link (if supported).
+
+Click “Upload” or “Save” to add the image to the carousel.
+
+The new image will now appear in the homepage carousel for all users.
+
+Screenshot:
+
+9. Add Images for Facilities and Features (Admin)
+
+Description:This page allows the administrator to upload or update images for each facility and feature offered with the furniture products. Visual representation helps users better understand the facilities (like delivery, setup, maintenance) and features (like steel frame, velvet, foldable) associated with each product.
+
+How to Use:
+
+Log in as admin and navigate to the Facilities Management or Features Management section in the admin dashboard.
+
+Select the facility or feature you want to update or add an image for.
+
+Click the Add Image or Upload Image button.
+
+Choose an appropriate image file from your computer (supported formats: JPG, PNG, SVG, etc.).
+
+Click Upload or Save to attach the image to the selected facility or feature.
+
+The new image will now be displayed alongside the facility or feature on the product details page for users.
+
+Screenshot:
+
+Annexure C: UML Diagrams
+
+Activity diagram
+
+Communication diagram
+
+Class diagram
+
+Sequence diagram
+
+Use case diagram
+
+Object diagram
+
+Annexure D: Sample Data
+
+This annexure provides example rows from key database tables to illustrate the structure and content of the Sadguru Tent House Furniture Rental Website database.
+
+Sample from products Table
+
+id
+
+name
+
+price
+
+quantity
+
+description
+
+status
+
+removed
+
+9
+
+Chairs
+
+12
+
+2000
+
+Suitable for a variety of events including weddings, conferences, and parties. The cushioned seat and backrest provide ergonomic support for long-lasting comfort.
+
+1
+
+0
+
+10
+
+Chair cover
+
+10
+
+2000
+
+The fully-covered design with a tailored white cover adds a clean, formal appearance, perfect for weddings, receptions, and formal events.
+
+1
+
+0
+
+11
+
+Golden Chair
+
+50
+
+1000
+
+Durable gold-finished frame, with a comfortable, cushioned white seat. Timeless, elegant, and sophisticated.
+
+1
+
+0
+
+Sample from facilities Table
+
+id
+
+icon
+
+name
+
+description
+
+22
+
+IMG_54507.svg
+
+Pre-Booking Options
+
+Provide an option to book furniture in advance for weddings, events, or special occasions.
+
+23
+
+IMG_48443.svg
+
+Delivery and Setup
+
+Offer delivery services to the customer's location. Setup at venue (chargeable).
+
+24
+
+IMG_83243.svg
+
+Furniture Recommendations
+
+Suggest furniture types/styles based on event type (e.g., weddings, corporate events).
+
+Annexure E: Code Listings
+
+This annexure includes important code snippets used in the Sadguru Tent House Furniture Rental Website, demonstrating secure and efficient coding practices.
+
+1. PHP: User Registration with Password Hashing
+
+php
+
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+$name = $_POST['name'];
+
+$email = $_POST['email'];
+
+$password = $_POST['password'];
+
+$hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+$stmt = $pdo->prepare("INSERT INTO user_cred (name, email, password) VALUES (?, ?, ?)");
+
+$stmt->execute([$name, $email, $hashedPassword]);
+
+}
+
+?>
+
+2. PHP: Secure Login with PDO
+
+php
+
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+$email = $_POST['email'];
+
+$password = $_POST['password'];
+
+$stmt = $pdo->prepare("SELECT * FROM user_cred WHERE email = ?");
+
+$stmt->execute([$email]);
+
+$user = $stmt->fetch();
+
+if ($user && password_verify($password, $user['password'])) {
+
+// Login successful
+
+$_SESSION['user_id'] = $user['id'];
+
+} else {
+
+// Invalid credentials
+
+}
+
+}
+
+?>
+
+3. PHP: Product Booking and Inventory Update
+
+php
+
+<?php
+
+$stmt = $pdo->prepare("SELECT quantity FROM products WHERE id = ?");
+
+$stmt->execute([$product_id]);
+
+$product = $stmt->fetch();
+
+if ($product && $product['quantity'] >= $requested_qty) {
+
+$pdo->beginTransaction();
+
+$stmt = $pdo->prepare("INSERT INTO booking_order (user_id, product_id, quantity_p, rent_in, rent_out) VALUES (?, ?, ?, ?, ?)");
+
+$stmt->execute([$user_id, $product_id, $requested_qty, $rent_in, $rent_out]);
+
+$stmt = $pdo->prepare("UPDATE products SET quantity = quantity - ? WHERE id = ?");
+
+$stmt->execute([$requested_qty, $product_id]);
+
+$pdo->commit();
+
+}
+
+?>
+
+4. SQL: Sample SELECT Query with JOIN
+
+sql
+
+SELECT products.name, features.name AS feature
+
+FROM products
+
+JOIN product_features ON products.id = product_features.product_id
+
+JOIN features ON product_features.features_id = features.id
+
+WHERE products.id = 9;
+
+5. JavaScript: Simple Form Validation
+
+javascript
+
+function validateBookingForm() {
+
+var quantity = document.getElementById('quantity').value;
+
+if (quantity <= 0) {
+
+alert('Please enter a valid quantity.');
+
+return false;
+
+}
+
+return true;
+
+}

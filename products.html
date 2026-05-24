@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Products - Furnish & Co. Premium Furniture Rentals</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Furnish <span>&</span> Co.</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html" class="nav-cta">Catalog</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="min-height: 60vh; padding: 8rem 5% 4rem;">
+  <div class="hero-text">
+    <div class="hero-tag">Our Collection</div>
+    <h1 class="hero-title">
+      Premium Furniture<br>For Every<br><em>Event</em>
+    </h1>
+    <p class="hero-desc">
+      Browse our extensive collection of chairs, sofas, tables, and decor items. All furniture is cleaned, maintained, and ready for your special occasion.
+    </p>
+    <div class="hero-btns">
+      <a href="booking.html" class="btn-primary">Get a Quote</a>
+      <a href="#catalog" class="btn-outline">Browse Items</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section id="catalog">
+  <div class="section-header reveal">
+    <div class="section-tag">Our Collection</div>
+    <h2 class="section-title">Browse Our Catalog</h2>
+    <p class="section-sub">Filter by category to find the perfect furniture for your event.</p>
+  </div>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">All Items</button>
+    <button class="filter-btn" onclick="filterProducts('chair', this)">Chairs</button>
+    <button class="filter-btn" onclick="filterProducts('sofa', this)">Sofas</button>
+    <button class="filter-btn" onclick="filterProducts('table', this)">Tables</button>
+    <button class="filter-btn" onclick="filterProducts('decor', this)">Decor</button>
+  </div>
+  <div class="product-grid" id="productGrid">
+
+    <div class="product-card" data-cat="chair">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <rect x="25" y="38" width="30" height="4" rx="2" fill="#C9A84C"/>
+          <rect x="25" y="28" width="30" height="12" rx="3" fill="#C9A84C"/>
+          <rect x="27" y="42" width="4" height="18" rx="2" fill="#C9A84C"/>
+          <rect x="49" y="42" width="4" height="18" rx="2" fill="#C9A84C"/>
+          <rect x="21" y="26" width="4" height="34" rx="2" fill="#C9A84C"/>
+          <rect x="55" y="26" width="4" height="34" rx="2" fill="#C9A84C"/>
+        </svg>
+        <div class="product-badge">Popular</div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Chair</div>
+        <div class="product-name">Royal Banquet Chair</div>
+        <div class="product-desc">Gold-framed elegant chairs perfect for weddings and formal events.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 80 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="sofa">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <rect x="10" y="44" width="60" height="7" rx="3" fill="#C9A84C"/>
+          <rect x="8" y="34" width="64" height="12" rx="4" fill="#C9A84C"/>
+          <rect x="12" y="51" width="7" height="12" rx="2" fill="#C9A84C"/>
+          <rect x="61" y="51" width="7" height="12" rx="2" fill="#C9A84C"/>
+          <rect x="8" y="30" width="7" height="24" rx="3" fill="#C9A84C"/>
+          <rect x="65" y="30" width="7" height="24" rx="3" fill="#C9A84C"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Sofa</div>
+        <div class="product-name">3-Seater Luxury Sofa</div>
+        <div class="product-desc">Plush, elegant sofa ideal for VIP lounges and receptions.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 500 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="table">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <rect x="12" y="35" width="56" height="5" rx="2" fill="#C9A84C"/>
+          <rect x="17" y="40" width="5" height="25" rx="2" fill="#C9A84C"/>
+          <rect x="58" y="40" width="5" height="25" rx="2" fill="#C9A84C"/>
+          <ellipse cx="40" cy="35" rx="28" ry="5" fill="#C9A84C" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Table</div>
+        <div class="product-name">Round Banquet Table</div>
+        <div class="product-desc">Seats 8-10 guests. Perfect for wedding halls and dining events.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 300 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="chair">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <rect x="28" y="40" width="24" height="3" rx="1.5" fill="#C9A84C"/>
+          <rect x="28" y="30" width="24" height="12" rx="3" fill="#C9A84C"/>
+          <rect x="30" y="43" width="3" height="20" rx="1.5" fill="#C9A84C"/>
+          <rect x="47" y="43" width="3" height="20" rx="1.5" fill="#C9A84C"/>
+          <circle cx="40" cy="57" r="4" fill="#C9A84C" opacity="0.4"/>
+        </svg>
+        <div class="product-badge">New</div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Chair</div>
+        <div class="product-name">Folding Chiavari Chair</div>
+        <div class="product-desc">Lightweight and stylish, ideal for large event venues.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 60 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="table">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <rect x="10" y="35" width="60" height="4" rx="2" fill="#C9A84C"/>
+          <rect x="14" y="39" width="4" height="26" rx="2" fill="#C9A84C"/>
+          <rect x="62" y="39" width="4" height="26" rx="2" fill="#C9A84C"/>
+          <rect x="10" y="33" width="60" height="4" rx="2" fill="#C9A84C" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Table</div>
+        <div class="product-name">Long Rectangular Table</div>
+        <div class="product-desc">6-foot conference and dining table with premium finish.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 250 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="decor">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <path d="M40 15 L45 30 L60 30 L48 40 L52 55 L40 46 L28 55 L32 40 L20 30 L35 30 Z" fill="#C9A84C" opacity="0.6"/>
+          <rect x="36" y="55" width="8" height="15" rx="2" fill="#C9A84C" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Decor</div>
+        <div class="product-name">Floral Centerpiece Stand</div>
+        <div class="product-desc">Elegant metal stand perfect for table centerpieces.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 150 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="sofa">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <rect x="20" y="44" width="40" height="7" rx="3" fill="#C9A84C"/>
+          <rect x="18" y="34" width="44" height="12" rx="4" fill="#C9A84C"/>
+          <rect x="22" y="51" width="6" height="10" rx="2" fill="#C9A84C"/>
+          <rect x="52" y="51" width="6" height="10" rx="2" fill="#C9A84C"/>
+          <rect x="18" y="30" width="6" height="24" rx="3" fill="#C9A84C"/>
+          <rect x="56" y="30" width="6" height="24" rx="3" fill="#C9A84C"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Sofa</div>
+        <div class="product-name">2-Seater Accent Sofa</div>
+        <div class="product-desc">Compact and stylish — great for photo corners and lounges.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 350 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="decor">
+      <div class="product-img">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-chair" style="width:60px;height:60px;">
+          <rect x="35" y="20" width="10" height="40" rx="2" fill="#C9A84C" opacity="0.5"/>
+          <ellipse cx="40" cy="20" rx="12" ry="5" fill="#C9A84C"/>
+          <rect x="25" y="58" width="30" height="5" rx="2" fill="#C9A84C"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Decor</div>
+        <div class="product-name">Event Backdrop Stand</div>
+        <div class="product-desc">Sturdy metal backdrop frame for photo booths and stages.</div>
+        <div class="product-footer">
+          <div class="product-price">Rs. 400 <span>/ per day</span></div>
+          <button class="product-btn" onclick="scrollToBooking()">Inquire</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Furnish <span>&</span> Co.</div>
+      <p class="footer-tagline">Premium furniture rentals for weddings, corporate events, and all occasions. Delivered, set up, and collected.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Quick Links</div>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Catalog</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#testimonials">Reviews</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Categories</div>
+      <a href="products.html">Chairs</a>
+      <a href="products.html">Sofas</a>
+      <a href="products.html">Tables</a>
+      <a href="products.html">Decor Items</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <a href="#">+91 98765 43210</a>
+      <a href="#">bookings@furnishandco.in</a>
+      <a href="#">123 Market Road, City</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">2026 Furnish and Co. All rights reserved.</div>
+    <div class="footer-copy">Designed with care for your events</div>
+  </div>
+</footer>
+
+<script>
+  // NAV SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // MOBILE MENU
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'fixed';
+    links.style.top = '0'; links.style.left = '0';
+    links.style.right = '0'; links.style.bottom = '0';
+    links.style.background = 'rgba(247,244,239,0.97)';
+    links.style.alignItems = 'center';
+    links.style.justifyContent = 'center';
+    links.style.gap = '2rem';
+    links.style.zIndex = '150';
+    links.style.backdropFilter = 'blur(12px)';
+  }
+
+  // FILTER PRODUCTS
+  function filterProducts(cat, btn) {
+    const cards = document.querySelectorAll('.product-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    cards.forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  // SCROLL TO BOOKING
+  function scrollToBooking() {
+    window.location.href = 'booking.html';
+  }
+
+  // REVEAL ANIMATION
+  function reveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(element => {
+      const windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+      const elementVisible = 150;
+      
+      if (elementTop < windowHeight - elementVisible) {
+        element.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', reveal);
+  reveal();
+</script>
+
+</body>
+</html>

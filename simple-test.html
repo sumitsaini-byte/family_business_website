@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Admin Test</title>
+</head>
+<body>
+    <h1>Simple Admin Test</h1>
+    <div id="output"></div>
+    
+    <script>
+        async function testAdmin() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<h3>Testing...</h3>';
+            
+            try {
+                // Step 1: Login
+                const loginResponse = await fetch('http://localhost:3000/api/admin/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: 'admin', password: 'admin123' })
+                });
+                
+                if (!loginResponse.ok) {
+                    output.innerHTML = '<h3 style="color: red">Login Failed: ' + loginResponse.status + '</h3>';
+                    return;
+                }
+                
+                const loginData = await loginResponse.json();
+                output.innerHTML += '<h3 style="color: green">Login Success!</h3>';
+                
+                // Step 2: Test Dashboard
+                const dashboardResponse = await fetch('http://localhost:3000/api/admin/dashboard', {
+                    headers: { 'Authorization': 'Bearer ' + loginData.token }
+                });
+                
+                if (dashboardResponse.ok) {
+                    const dashboardData = await dashboardResponse.json();
+                    output.innerHTML += '<h3 style="color: green">Dashboard Works! Bookings: ' + dashboardData.totalBookings + '</h3>';
+                } else {
+                    output.innerHTML += '<h3 style="color: red">Dashboard Failed: ' + dashboardResponse.status + '</h3>';
+                }
+                
+                // Step 3: Test Bookings
+                const bookingsResponse = await fetch('http://localhost:3000/api/admin/bookings', {
+                    headers: { 'Authorization': 'Bearer ' + loginData.token }
+                });
+                
+                if (bookingsResponse.ok) {
+                    const bookingsData = await bookingsResponse.json();
+                    output.innerHTML += '<h3 style="color: green">Bookings Works! Found: ' + bookingsData.length + ' bookings</h3>';
+                } else {
+                    output.innerHTML += '<h3 style="color: red">Bookings Failed: ' + bookingsResponse.status + '</h3>';
+                }
+                
+                // Step 4: Store token for frontend
+                localStorage.setItem('adminToken', loginData.token);
+                output.innerHTML += '<h3 style="color: blue">Token stored! Now try: <a href="http://localhost:3000/admin" target="_blank">Admin Dashboard</a></h3>';
+                
+            } catch (error) {
+                output.innerHTML = '<h3 style="color: red">Error: ' + error.message + '</h3>';
+            }
+        }
+        
+        testAdmin();
+    </script>
+</body>
+</html>
